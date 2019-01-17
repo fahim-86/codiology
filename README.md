@@ -1,7 +1,7 @@
 # codiology
 1. Clone the repository
 2. Run <b>npm install</b> to install required dependencies
-3. Install concurrently: <i>npm i concurrently</i>
+3. Run concurrently: <b><i>npm i concurrently</i></b>
 2. Type <b><i>npm run dev</i></b> and enjoy 
 <h3>Technology used / Built With</h3>
 <ul><li><a href="https://nodeframework.com/">NodeJS</a> - for server side</li>
