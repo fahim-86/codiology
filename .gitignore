@@ -1,0 +1,5 @@
+/node_modules
+/documentation
+/devconnector_theme
+/.vscode
+package-lock.json
