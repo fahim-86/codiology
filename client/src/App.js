@@ -16,7 +16,6 @@ import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
 
 import './App.css';
-import { clearCurrentProfile } from './actions/profileActions';
 
 // Check for Token
 if (localStorage.jwtToken) {
