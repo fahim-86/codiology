@@ -4,20 +4,17 @@ import PropTypes from 'prop-types';
 
 const SelectListGroup = ({ name, value, error, info, onChange, options }) => {
   const selectOptions = options.map(options => (
-    <option key={option.label} value={option.value}>
-      {option.label}
+    <option key={options.label} value={options.value}>
+      {options.label}
     </option>
   ));
 
   return (
     <div className="form-group">
       <select
-        className={
-          ('form-control form-control-lg',
-          {
-            'is-invalid': error
-          })
-        }
+        className={classnames('form-control form-control-lg', {
+          'is-invalid': error
+        })}
         name={name}
         value={value}
         onChange={onChange}
