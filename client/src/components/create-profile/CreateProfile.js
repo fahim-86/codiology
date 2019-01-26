@@ -25,9 +25,24 @@ class CreateProfile extends Component {
       instragram: '',
       errors: {}
     };
+
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+
+    console.log('submit');
   }
 
   render() {
+    const { errors } = this.state;
+
     return (
       <div className="create-profile">
         <div className="container">
@@ -38,6 +53,15 @@ class CreateProfile extends Component {
                 Write here something that makes your profile Stand Out
               </p>
               <small className="d-block pb-3">* = required field</small>
+              <form onSubmit={this.onSubmit}>
+                <TextFieldGroup
+                  placeholder="* Profile Handle"
+                  name="handle"
+                  value={this.state.handle}
+                  onChange={this.onChange}
+                  info="An Unique for your profile URL, full name, company name, nickname"
+                />
+              </form>
             </div>
           </div>
         </div>
