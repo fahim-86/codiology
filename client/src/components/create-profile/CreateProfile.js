@@ -45,15 +45,15 @@ class CreateProfile extends Component {
 
     // Dropdown options for status
     const options = [
-      {label: '* Select your professional status', value: 0},
-      {label: 'Developer', value:'Developer'},
-      {label: 'Junior Developer', value: 'Junior Developer'},
-      {label: 'Senior Developer', value: 'Senior Developer'},
-      {label: 'Manager', value:'Manager'},
-      {label: 'Student or Learner', value: 'Student or Learner'},
-      {label: 'Instractor or Teacher', value: 'Instractor or Teacher'},
-      {label: 'Intern', value: 'Intern'},
-      {label: 'Other', value: 'Other'}
+      { label: '* Select your professional status', value: 0 },
+      { label: 'Developer', value: 'Developer' },
+      { label: 'Junior Developer', value: 'Junior Developer' },
+      { label: 'Senior Developer', value: 'Senior Developer' },
+      { label: 'Manager', value: 'Manager' },
+      { label: 'Student or Learner', value: 'Student or Learner' },
+      { label: 'Instractor or Teacher', value: 'Instractor or Teacher' },
+      { label: 'Intern', value: 'Intern' },
+      { label: 'Other', value: 'Other' }
     ];
 
     return (
@@ -75,14 +75,46 @@ class CreateProfile extends Component {
                   error={errors.handle}
                   info="An Unique for your profile URL, full name, company name, nickname"
                 />
-                <SelectListGroup 
-                  placeholder= "Status"
-                  name= "status"
-                  value= {this.state.status}
-                  onChange= {this.onChange}
+                <SelectListGroup
+                  placeholder="Status"
+                  name="status"
+                  value={this.state.status}
+                  onChange={this.onChange}
                   options={options}
                   error={errors.status}
                   info="Let us know the position you are currently holding"
+                />
+                <TextFieldGroup
+                  placeholder="Company"
+                  name="company"
+                  value={this.state.company}
+                  onChange={this.onChange}
+                  error={errors.company}
+                  info="Use your own company or the company you work for"
+                />
+                <TextFieldGroup
+                  placeholder="Website"
+                  name="website"
+                  value={this.state.website}
+                  onChange={this.onChange}
+                  error={errors.website}
+                  info="Mention your portfolio website or company website"
+                />
+                <TextFieldGroup
+                  placeholder="Location"
+                  name="location"
+                  value={this.state.location}
+                  onChange={this.onChange}
+                  error={errors.location}
+                  info="City or area you are from (i.e Dhaka, Malibag)"
+                />
+                <TextFieldGroup
+                  placeholder="Skills"
+                  name="skills"
+                  value={this.state.value}
+                  onChange={this.onChange}
+                  error={errors.skills}
+                  info="Please use comma separated values (i.e HTML,CSS,JavaScript,PHP)"
                 />
               </form>
             </div>
