@@ -133,6 +133,19 @@ class CreateProfile extends Component {
                   error={errors.bio}
                   info="Discribe yourself the best possible way"
                 />
+                <div className="mb-3">
+                  <button
+                    className="btn btn-light"
+                    onClick={() => {
+                      this.setState(prevState => ({
+                        displaySocialInputs: !prevState.displaySocialInputs
+                      }));
+                    }}
+                  >
+                    Add Social Media Links
+                  </button>
+                  <span className="text-muted"> Optional</span>
+                </div>
               </form>
             </div>
           </div>
