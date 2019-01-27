@@ -43,6 +43,19 @@ class CreateProfile extends Component {
   render() {
     const { errors } = this.state;
 
+    // Dropdown options for status
+    const options = [
+      {label: '* Select your professional status', value: 0},
+      {label: 'Developer', value:'Developer'},
+      {label: 'Junior Developer', value: 'Junior Developer'},
+      {label: 'Senior Developer', value: 'Senior Developer'},
+      {label: 'Manager', value:'Manager'},
+      {label: 'Student or Learner', value: 'Student or Learner'},
+      {label: 'Instractor or Teacher', value: 'Instractor or Teacher'},
+      {label: 'Intern', value: 'Intern'},
+      {label: 'Other', value: 'Other'}
+    ];
+
     return (
       <div className="create-profile">
         <div className="container">
@@ -59,7 +72,17 @@ class CreateProfile extends Component {
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
+                  error={errors.handle}
                   info="An Unique for your profile URL, full name, company name, nickname"
+                />
+                <SelectListGroup 
+                  placeholder= "Status"
+                  name= "status"
+                  value= {this.state.status}
+                  onChange= {this.onChange}
+                  options={options}
+                  error={errors.status}
+                  info="Let us know the position you are currently holding"
                 />
               </form>
             </div>
