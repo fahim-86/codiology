@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import InputGroup from '../common/InputGroup';
+import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -115,6 +116,22 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.skills}
                   info="Please use comma separated values (i.e HTML,CSS,JavaScript,PHP)"
+                />
+                <TextFieldGroup
+                  placeholder="Github Username"
+                  name="githubusername"
+                  value={this.state.value}
+                  onChange={this.onChange}
+                  error={errors.githubusername}
+                  info="You can include your Github link to show your latest projects"
+                />
+                <TextAreaFieldGroup
+                  placeholder="Short Bio"
+                  name="bio"
+                  value={this.state.bio}
+                  onChange={this.onChange}
+                  error={errors.bio}
+                  info="Discribe yourself the best possible way"
                 />
               </form>
             </div>
