@@ -23,7 +23,7 @@ class CreateProfile extends Component {
       facebook: '',
       linkedin: '',
       youtube: '',
-      instragram: '',
+      instagram: '',
       errors: {}
     };
 
@@ -42,7 +42,57 @@ class CreateProfile extends Component {
   }
 
   render() {
-    const { errors } = this.state;
+    const { errors, displaySocialInputs } = this.state;
+
+    // Drop-down contidion
+    let socialInputs;
+
+    if (displaySocialInputs) {
+      socialInputs = (
+        <div>
+          <InputGroup
+            placeholder="Twitter Proile URL"
+            name="twitter"
+            icon="fa fa-twitter"
+            value={this.state.value}
+            onChange={this.onChange}
+            error={errors.twitter}
+          />
+          <InputGroup
+            placeholder="Facebook Page URL"
+            name="facebook"
+            icon="fa fa-facebook"
+            value={this.state.value}
+            onChange={this.onChange}
+            error={errors.facebook}
+          />
+          <InputGroup
+            placeholder="LinkedIn Profile URL"
+            name="linkedin"
+            icon="fa fa-linkedin"
+            value={this.state.value}
+            onChange={this.onChange}
+            error={errors.linkedin}
+          />
+          <InputGroup
+            placeholder="YouTube Channel URL"
+            name="youtube"
+            icon="fa fa-youtube"
+            value={this.state.value}
+            onChange={this.onChange}
+            error={errors.youtube}
+          />
+          <InputGroup
+            placeholder="Instagram page URL"
+            name="instagram"
+            icon="fa fa-instagram"
+            value={this.state.value}
+            onChange={this.onChange}
+            error={errors.instagram}
+          />
+        </div>
+      );
+    }
 
     // Dropdown options for status
     const options = [
@@ -146,6 +196,12 @@ class CreateProfile extends Component {
                   </button>
                   <span className="text-muted"> Optional</span>
                 </div>
+                {socialInputs}
+                <input
+                  type="submit"
+                  value="Submit"
+                  className="btn btn-info btn-block mt-4"
+                />
               </form>
             </div>
           </div>

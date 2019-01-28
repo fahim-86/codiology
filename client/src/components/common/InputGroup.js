@@ -22,8 +22,8 @@ const InputGroup = ({
         className={classnames('form-control form-control-lg', {
           'is-invalid': error
         })}
-        name={name}
         placeholder={placeholder}
+        name={name}
         value={value}
         onChange={onChange}
       />
