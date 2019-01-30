@@ -131,7 +131,7 @@ class CreateProfile extends Component {
             placeholder="Twitter Proile URL"
             name="twitter"
             icon="fa fa-twitter"
-            value={this.state.value}
+            value={this.state.twitter}
             onChange={this.onChange}
             error={errors.twitter}
           />
@@ -139,7 +139,7 @@ class CreateProfile extends Component {
             placeholder="Facebook Page URL"
             name="facebook"
             icon="fa fa-facebook"
-            value={this.state.value}
+            value={this.state.facebook}
             onChange={this.onChange}
             error={errors.facebook}
           />
@@ -147,7 +147,7 @@ class CreateProfile extends Component {
             placeholder="LinkedIn Profile URL"
             name="linkedin"
             icon="fa fa-linkedin"
-            value={this.state.value}
+            value={this.state.linkedin}
             onChange={this.onChange}
             error={errors.linkedin}
           />
@@ -155,7 +155,7 @@ class CreateProfile extends Component {
             placeholder="YouTube Channel URL"
             name="youtube"
             icon="fa fa-youtube"
-            value={this.state.value}
+            value={this.state.youtube}
             onChange={this.onChange}
             error={errors.youtube}
           />
@@ -163,7 +163,7 @@ class CreateProfile extends Component {
             placeholder="Instagram page URL"
             name="instagram"
             icon="fa fa-instagram"
-            value={this.state.value}
+            value={this.state.instagram}
             onChange={this.onChange}
             error={errors.instagram}
           />
@@ -236,7 +236,7 @@ class CreateProfile extends Component {
                 <TextFieldGroup
                   placeholder="Skills"
                   name="skills"
-                  value={this.state.value}
+                  value={this.state.skills}
                   onChange={this.onChange}
                   error={errors.skills}
                   info="Please use comma separated values (i.e HTML,CSS,JavaScript,PHP)"
@@ -244,7 +244,7 @@ class CreateProfile extends Component {
                 <TextFieldGroup
                   placeholder="Github Username"
                   name="githubusername"
-                  value={this.state.value}
+                  value={this.state.githubusername}
                   onChange={this.onChange}
                   error={errors.githubusername}
                   info="You can include your Github link to show your latest projects"
