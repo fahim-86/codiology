@@ -5,4 +5,5 @@
 /documentation
 /devconnector_theme
 /.vscode
+/config/keys_dev.js
 package-lock.json
