@@ -37,3 +37,31 @@ img {
 .form-control::placeholder {
   color: #bbb !important;
 }
+
+.navbar-default {
+  background-color: #f8f8f815;
+  border-color: #e7e7e7;
+}
+
+.navbar-brand {
+  color: #f39a27;
+}
+.navbar-brand:hover {
+  color: #f7f2f2;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: rgb(166, 248, 184);
+}
+
+.btn-info {
+  background-color: rgb(59, 245, 99) !important;
+}
+
+.bg-info {
+  background-color: rgb(59, 245, 99) !important;
+}

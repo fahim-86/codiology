@@ -129,12 +129,12 @@ class AddEducation extends Component {
                   </label>
                 </div>
                 <TextAreaFieldGroup
-                  placeholder="Other certification details"
+                  placeholder="Your Achievements"
                   name="description"
                   value={this.state.description}
                   onChange={this.onChange}
                   error={errors.description}
-                  info="Describe your other certification courses"
+                  info="Describe your achievements"
                 />
                 <input
                   type="submit"
