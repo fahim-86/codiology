@@ -16,7 +16,7 @@ class AddExperience extends Component {
       from: '',
       to: '',
       current: false,
-      discription: '',
+      description: '',
       errors: {},
       disabled: false
     };
